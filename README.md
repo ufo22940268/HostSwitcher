@@ -16,3 +16,11 @@
 
 - [Chrome商店](https://chrome.google.com/webstore/detail/lodhoameeheeedebkghhlmifhinfkhhe/publish-accepted)
 
+
+## License
+
+MIT
+
+## 写在最后
+
+不要问我为什么icon这么好看,我不会告诉你是我握着鼠标画出来的.
