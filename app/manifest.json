@@ -1,5 +1,5 @@
 {
-  "name": "服务器域名切换器",
+  "name": "域名切换器",
   "version": "0.0.1",
   "manifest_version": 2,
   "description": "通过这个工具你能够在线上和线下服务器的URL之间进行一键切换",
@@ -22,7 +22,7 @@
       "19": "images/icon-19.png",
       "38": "images/icon-38.png"
     },
-    "default_title": "服务器域名切换器"
+    "default_title": "域名切换器"
   },
 
   "options_page": "popup.html"
