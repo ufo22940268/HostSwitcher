@@ -14,7 +14,7 @@
 
 ## 下载地址
 
-- [Chrome商店](https://chrome.google.com/webstore/detail/lodhoameeheeedebkghhlmifhinfkhhe/publish-accepted)
+- [Chrome商店](https://chrome.google.com/webstore/detail/%E5%9F%9F%E5%90%8D%E5%88%87%E6%8D%A2%E5%99%A8/lodhoameeheeedebkghhlmifhinfkhhe)
 
 
 ## License
