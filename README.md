@@ -1,6 +1,6 @@
 # HostSwitcher
 
-切换URL中的HOST，方便程序员在本地重现bug。
+通过Chrome插件来切换URL中的HOST，方便程序员在本地重现bug。
 
 比如
 
