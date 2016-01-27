@@ -1,13 +1,11 @@
 'use strict';
 
-let debug = false;
-let debugHosts = ['127.0.0.1:4000', 'admin.xinpinget.com'];
+let debug = true;
+let debugHosts = ['admin.xinpinget.com', '127.0.0.1:4000',  'daily.xinpinget.com' , '127.0.0.1:3000'];
 
 function getHostsForProduction(callback) {
-  chrome.storage.sync.get(['host1', 'host2'], function (result) {
-    if (result.host1 && result.host2) {
-      callback([result.host1, result.host2]);
-    }
+  chrome.storage.sync.get('hosts', function (result) {
+      callback(result.hosts ? result.hosts : []);
   });
 }
 
@@ -58,9 +56,10 @@ chrome.pageAction.onClicked.addListener(function (tab) {
     getHosts(hosts => {
       console.log(hosts);
       for (let i in hosts) {
+        i = Number(i);
         let host = hosts[i];
         if (url.includes(host)) {
-          let newUrl = url.replace(/(http:\/\/).+?(\/.*)/, '$1' + hosts[(Number(i) + 1) % 2] + '$2');
+          let newUrl = url.replace(/(http:\/\/).+?(\/.*)/, '$1' + hosts[i%2 ? i - 1 : i + 1] + '$2');
           chrome.tabs.update(tab.id, {url: newUrl});
         }
       }

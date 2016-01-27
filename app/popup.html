@@ -1,45 +1,44 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <!-- build:css styles/popup-vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css styles/main.css -->
-    <link href="styles/main.css" rel="stylesheet">
-    <!-- endbuild -->
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <!-- build:css styles/popup-vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css styles/main.css -->
+  <link href="styles/main.css" rel="stylesheet">
+  <!-- endbuild -->
+</head>
+<body>
 
-  <h1>
-    配置服务器地址
-  </h1>
-
-          <p>
-          <input type="text" id="host1" placeholder="远程服务器地址" name="host1" required>
-          </p>
-          <=========>
-          <p>
-          <input type="text" id="host2" placeholder="本地服务器地址" name="host2"required>
-          </p>
-          <button id="save" type="button">确定</button>
-  <hr>
-  <label>配置说明:</label>
-  <ul>
-    <li>远程服务器地址和本地服务器地址都必须是有效的服务器地址,格式应该为`example.com`或者`aa.example.com`, 不应该带有协议头</li>
-    <li>配置完成之后你在打开相应的网页的时候就会在地址栏右上角弹出一个切换用的小图标</li>
-    <li>点击之后就能够在这两个地址间进行切换</li>
-  </ul>
+<h1>
+  配置服务器地址
+</h1>
 
 
-    <!-- build:js scripts/popup-vendor.js -->
-    <!-- bower:js -->
-    <!-- endbower -->
-    <!-- endbuild -->
+<div id="container">
+</div>
 
-    <!-- build:js scripts/popup.js -->
-    <script src="scripts/popup.js"></script>
-    <!-- endbuild -->
-  </body>
+<button id="append" type="button">添加</button>
+<button id="save" type="button" style="margin-left: 30px; color: dodgerblue">确定</button>
+
+<hr>
+<label>配置说明:</label>
+<ul>
+  <li>远程服务器地址和本地服务器地址都必须是有效的服务器地址,格式应该为`example.com`或者`aa.example.com`, 不应该带有协议头</li>
+  <li>配置完成之后你在打开相应的网页的时候就会在地址栏右上角弹出一个切换用的小图标</li>
+  <li>点击之后就能够在这两个地址间进行切换</li>
+</ul>
+
+
+<!-- build:js scripts/popup-vendor.js -->
+<!-- bower:js -->
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js scripts/popup.js -->
+<script src="scripts/popup.js"></script>
+<!-- endbuild -->
+</body>
 </html>
