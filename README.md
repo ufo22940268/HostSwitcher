@@ -11,6 +11,10 @@
 
 那么这时候如果我们有一个URL为`oneline.com/x/y/z`，那么我们就能通过这个扩展轻松地切换到本地的服务器地址`offline.com/x/y/z`
 
+## 截图
+
+![](screenshot/QQ20160126-3.png)
+![](screenshot/QQ20160127-0.png)
 
 ## 下载地址
 
