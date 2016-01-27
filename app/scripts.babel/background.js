@@ -1,6 +1,6 @@
 'use strict';
 
-let debug = true;
+let debug = false;
 let debugHosts = ['admin.xinpinget.com', '127.0.0.1:4000',  'daily.xinpinget.com' , '127.0.0.1:3000'];
 
 function getHostsForProduction(callback) {
