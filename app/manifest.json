@@ -1,6 +1,6 @@
 {
   "name": "域名切换器",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "manifest_version": 2,
   "description": "通过这个工具你能够在线上和线下服务器的URL之间进行一键切换",
   "icons": {
