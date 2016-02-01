@@ -6,22 +6,51 @@ function isHostValid(h) {
 
 let container = document.getElementById('container');
 
-function buildRowItem() {
+function updateListener() {
+  Array.from(document.getElementsByClassName('remove')).forEach(el => {
+    el.removeEventListener('click');
+    el.addEventListener('click', event=> {
+      event.target.parentNode.outerHTML = '';
+      updateListener();
+    })
+  });
+}
+
+function buildRowItem(hosts) {
+  if (!hosts) {
+    hosts = ['', ''];
+  }
+
   var p = document.createElement('p');
   p.innerHTML = `
-  <input type="text" id="host1" class="host" placeholder="远程服务器地址">
+  <input type="text" id="host1" class="host" placeholder="远程服务器地址" value="${hosts[0]}">
     <=========>
-    <input type="text" id="host2" class="host" placeholder="本地服务器地址">
+    <input type="text" id="host2" class="host" placeholder="本地服务器地址" value="${hosts[1]}">
+    <button class="remove">删除</button>
   `;
+
+  updateListener();
 
   return p;
 }
 
-function appendRow() {
-  container.appendChild(buildRowItem());
+function appendRow(hosts) {
+  container.appendChild(buildRowItem(hosts));
 }
 
-appendRow();
+function initRows() {
+  chrome.storage.sync.get('hosts', function (result) {
+    if (!result.hosts) {
+      appendRow();
+    } else {
+      for (let i = 0; i < result.hosts.length; i += 2) {
+        appendRow(result.hosts.slice(i, i + 2));
+      }
+    }
+  });
+}
+
+initRows();
 
 document.getElementById('append').addEventListener('click', ()=> appendRow());
 
@@ -43,3 +72,4 @@ document.getElementById('save').addEventListener('click', ()=> {
     alert('域名不合法,合法的域名应该像"aaa.bbb.ccc" 或者"bbb.ccc"');
   }
 });
+
